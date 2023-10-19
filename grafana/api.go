@@ -70,7 +70,7 @@ func NewV4Client(grafanaURL string, apiToken string, variables url.Values, sslCh
 // variables are Grafana template variable url values of the form var-{name}={value}, e.g. var-host=dev
 func NewV5Client(grafanaURL string, apiToken string, variables url.Values, sslCheck bool, gridLayout bool) Client {
 	getDashEndpoint := func(dashName string) string {
-		dashURL := grafanaURL + "/api/dashboards/uid/" + dashName
+		dashURL := grafanaURL + "/graph/api/dashboards/uid/" + dashName
 		if len(variables) > 0 {
 			dashURL = dashURL + "?" + variables.Encode()
 		}
