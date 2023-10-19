@@ -50,7 +50,7 @@ func TestGrafanaClientFetchesDashboard(t *testing.T) {
 			grf.GetDashboard("rYy7Paekz")
 
 			Convey("It should use the v5 dashboards endpoint", func() {
-				So(requestURI, ShouldEqual, "/api/dashboards/uid/rYy7Paekz")
+				So(requestURI, ShouldEqual, "/graph/api/dashboards/uid/rYy7Paekz")
 			})
 		})
 
