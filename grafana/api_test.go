@@ -77,8 +77,8 @@ func TestGrafanaClientFetchesPanelPNG(t *testing.T) {
 			client      Client
 			pngEndpoint string
 		}{
-			"v4": {NewV4Client(ts.URL, apiToken, variables, true, false), "/render/dashboard-solo/db/testDash"},
-			"v5": {NewV5Client(ts.URL, apiToken, variables, true, false), "/render/d-solo/testDash/_"},
+			"v4": {NewV4Client(ts.URL, apiToken, variables, true, false), "/graph/render/dashboard-solo/db/testDash"},
+			"v5": {NewV5Client(ts.URL, apiToken, variables, true, false), "/graph/render/d-solo/testDash/_"},
 		}
 		for clientDesc, cl := range cases {
 			grf := cl.client
