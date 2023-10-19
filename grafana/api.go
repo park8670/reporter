@@ -78,7 +78,7 @@ func NewV5Client(grafanaURL string, apiToken string, variables url.Values, sslCh
 	}
 
 	getPanelEndpoint := func(dashName string, vals url.Values) string {
-		return fmt.Sprintf("%s/render/d-solo/%s/_?%s", grafanaURL, dashName, vals.Encode())
+		return fmt.Sprintf("%s/graph/render/d-solo/%s/_?%s", grafanaURL, dashName, vals.Encode())
 	}
 	return client{grafanaURL, getDashEndpoint, getPanelEndpoint, apiToken, variables, sslCheck, gridLayout}
 }
