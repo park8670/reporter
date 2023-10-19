@@ -26,7 +26,7 @@ import (
 	"sync"
 	"text/template"
 
-	"github.com/IzakMarais/reporter/grafana"
+	"github.com/park8670/reporter/grafana"
 	"github.com/pborman/uuid"
 )
 
